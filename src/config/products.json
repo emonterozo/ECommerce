@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "description": "mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui",
+    "price": 129,
+    "images": [
+      "https://picsum.photos/id/0/700",
+      "https://picsum.photos/id/1/700",
+      "https://picsum.photos/id/2/700"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "description": "scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl",
+    "price": 250,
+    "images": [
+      "https://picsum.photos/id/23/700",
+      "https://picsum.photos/id/12/700",
+      "https://picsum.photos/id/21/700"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "description": "neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor",
+    "price": 99.25,
+    "images": [
+      "https://picsum.photos/id/30/700",
+      "https://picsum.photos/id/5/700"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "description": "congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas maecenas pharetra",
+    "price": 75.53,
+    "images": [
+      "https://picsum.photos/id/6/700",
+      "https://picsum.photos/id/7/700",
+      "https://picsum.photos/id/30/700"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "description": "rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare",
+    "price": 125.33,
+    "images": [
+      "https://picsum.photos/id/56/700",
+      "https://picsum.photos/id/57/700",
+      "https://picsum.photos/id/100/700"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "description": "faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus",
+    "price": 340.45,
+    "images": [
+      "https://picsum.photos/id/200/700",
+      "https://picsum.photos/id/201/700",
+      "https://picsum.photos/id/23/700"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "description": "aliquam ut porttitor leo a diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit",
+    "price": 240,
+    "images": [
+      "https://picsum.photos/id/101/700",
+      "https://picsum.photos/id/102/700"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "description": "aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin",
+    "price": 100,
+    "images": [
+      "https://picsum.photos/id/46/700",
+      "https://picsum.photos/id/47/700",
+      "https://picsum.photos/id/39/700"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Product 9",
+    "description": "tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque",
+    "price": 220.99,
+    "images": [
+      "https://picsum.photos/id/36/700",
+      "https://picsum.photos/id/37/700",
+      "https://picsum.photos/id/40/700",
+      "https://picsum.photos/id/50/700"
+    ]
+  }
+]

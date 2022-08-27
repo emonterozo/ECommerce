@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "description": "mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui",
+    "price": 129,
+    "images": [
+      "https://picsum.photos/id/0/700",
+      "https://picsum.photos/id/1/700",
+      "https://picsum.photos/id/2/700"
+    ],
+    "quantity": 5
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "description": "scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl",
+    "price": 250,
+    "images": [
+      "https://picsum.photos/id/23/700",
+      "https://picsum.photos/id/12/700",
+      "https://picsum.photos/id/21/700"
+    ],
+    "quantity": 3
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "description": "neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor",
+    "price": 99.23,
+    "images": [
+      "https://picsum.photos/id/30/700",
+      "https://picsum.photos/id/5/700"
+    ],
+    "quantity": 8
+  },
+  {
+    "id": 4,
+    "name": "Product 2",
+    "description": "scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl",
+    "price": 250,
+    "images": [
+      "https://picsum.photos/id/23/700",
+      "https://picsum.photos/id/12/700",
+      "https://picsum.photos/id/21/700"
+    ],
+    "quantity": 3
+  },
+  {
+    "id": 5,
+    "name": "Product 3",
+    "description": "neque sodales ut etiam sit amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor",
+    "price": 99.25,
+    "images": [
+      "https://picsum.photos/id/30/700",
+      "https://picsum.photos/id/5/700"
+    ],
+    "quantity": 8
+  }
+]
