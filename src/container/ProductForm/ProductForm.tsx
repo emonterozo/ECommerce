@@ -10,7 +10,7 @@ import {
   Pressable,
   VStack,
 } from 'native-base';
-//import ImagePicker from 'react-native-image-crop-picker';
+import ImagePicker from 'react-native-image-crop-picker';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import storage from '@react-native-firebase/storage';
@@ -60,7 +60,7 @@ const ProductForm = ({navigation, route}: any) => {
   }, [title]);
 
   const handlePressImage = (index: number) => {
-    /*ImagePicker.openPicker({
+    ImagePicker.openPicker({
       width: 700,
       height: 700,
       cropping: true,
@@ -69,7 +69,7 @@ const ProductForm = ({navigation, route}: any) => {
       const holder = [...images];
       holder[index] = image.path;
       setImages(holder);
-    });*/
+    });
   };
 
   const submit = async (values: IValues) => {
