@@ -88,7 +88,7 @@ const Store = ({navigation}: any) => {
   );
 
   return (
-    <Box flex={1}>
+    <Box flex={1} safeArea>
       <AppBar isCartVisible title="Store" navigation={navigation} />
       <Box flex={1}>
         <FlatList

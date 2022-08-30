@@ -33,7 +33,7 @@ const Cart = ({navigation}: any) => {
   let prevOpenedRow: any;
 
   const updateQuantity = (action: string, id: string) => {
-    let newCart = cart.map((item: ICart) =>
+    let newCart = cart?.map((item: ICart) =>
       item.id === id
         ? {
             ...item,
@@ -52,7 +52,7 @@ const Cart = ({navigation}: any) => {
   };
 
   const calculateSum = () => {
-    let prices = cart.map((item: ICart) => item.price * item.quantity);
+    let prices = cart?.map((item: ICart) => item.price * item.quantity);
     return sum(prices);
   };
 
@@ -146,12 +146,12 @@ const Cart = ({navigation}: any) => {
   };
 
   return (
-    <Box flex={1}>
+    <Box flex={1} safeArea>
       <AppBar hasBack title="Cart" navigation={navigation} />
       <FlatList
         data={cart}
         renderItem={renderProduct}
-        contentContainerStyle={cart.length <= 0 && styles.empty}
+        contentContainerStyle={cart?.length <= 0 && styles.empty}
         ListEmptyComponent={
           <Center>
             <Text fontSize="md" bold color="warmGray.500">
@@ -172,8 +172,8 @@ const Cart = ({navigation}: any) => {
         <Button
           w="50%"
           borderRadius="full"
-          disabled={!cart.length}
-          colorScheme={cart.length ? 'cyan' : 'gray'}>
+          disabled={!cart?.length}
+          colorScheme={cart?.length ? 'cyan' : 'gray'}>
           {`Checkout (${totalItems()})`}
         </Button>
       </HStack>

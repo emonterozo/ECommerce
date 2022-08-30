@@ -39,6 +39,7 @@ const ProductForm = ({navigation, route}: any) => {
   const {title, product} = route.params;
   const [imageError, setImageError] = useState('');
   const [images, setImages] = useState(['', '', '']);
+  const [isLoading, setIsLoading] = useState(false);
   const initial = {
     name: product?.name || '',
     description: product?.description || '',
@@ -75,6 +76,7 @@ const ProductForm = ({navigation, route}: any) => {
     );
 
     if (imageError === '') {
+      setIsLoading(true);
       if (title.includes('Add')) {
         const imagesUrl = await uploadImages(imagesToUpload);
         firestore()
@@ -175,7 +177,7 @@ const ProductForm = ({navigation, route}: any) => {
   };
 
   return (
-    <Box flex={1}>
+    <Box flex={1} safeArea>
       <AppBar hasBack title={title} navigation={navigation} />
       <Formik
         initialValues={initial}
@@ -277,6 +279,7 @@ const ProductForm = ({navigation, route}: any) => {
             </FormControl>
             <Button
               mt="5"
+              isLoading={isLoading}
               colorScheme={isDataChanged(values) ? 'trueGray' : 'cyan'}
               disabled={isDataChanged(values)}
               onPress={() => {

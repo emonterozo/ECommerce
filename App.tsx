@@ -1,22 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-import 'react-native-gesture-handler';
 import React, {useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {NativeBaseProvider} from 'native-base';
 
 import Navigation from './src/navigation/Navigation';
 import GlobalContext from './src/config/context';
 
-import cartData from './src/config/cart.json';
-
+const inset = {
+  frame: {x: 0, y: 0, width: 0, height: 0},
+  insets: {top: 0, left: 0, right: 0, bottom: 0},
+};
 const App = () => {
   const [cart, setCart] = useState([]);
 
@@ -28,9 +19,7 @@ const App = () => {
   return (
     <GlobalContext.Provider value={initialContext}>
       <NativeBaseProvider>
-        <NavigationContainer>
-          <Navigation />
-        </NavigationContainer>
+        <Navigation />
       </NativeBaseProvider>
     </GlobalContext.Provider>
   );
