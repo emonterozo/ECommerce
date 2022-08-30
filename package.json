@@ -62,10 +62,10 @@
       "node"
     ],
     "setupFiles": [
-      "./node_modules/react-native-gesture-handler/jestSetup.js"
+      "./jest.setup.js"
     ],
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@react-native|react-native|react-native-vector-icons|native-base)/).*/"
+      "/node_modules/(?!(@react-native|react-native|react-native-vector-icons|native-base|@react-native-firebase|react-native-snap-carousel|react-native-image-crop-picker)/).*/"
     ]
   }
 }

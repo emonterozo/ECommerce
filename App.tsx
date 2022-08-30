@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <GlobalContext.Provider value={initialContext}>
-      <NativeBaseProvider>
+      <NativeBaseProvider initialWindowMetrics={inset}>
         <Navigation />
       </NativeBaseProvider>
     </GlobalContext.Provider>

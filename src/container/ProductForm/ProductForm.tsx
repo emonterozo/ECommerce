@@ -10,7 +10,7 @@ import {
   Pressable,
   VStack,
 } from 'native-base';
-import ImagePicker from 'react-native-image-crop-picker';
+//import ImagePicker from 'react-native-image-crop-picker';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 import storage from '@react-native-firebase/storage';
@@ -19,7 +19,8 @@ import uuid from 'react-native-uuid';
 
 import {AppBar} from '../../components';
 import {FileImagePlus} from '../../assests/svg';
-import {isEqual} from 'lodash';
+import {isEmpty, isEqual} from 'lodash';
+import {isValidURL} from '../../utils/utils';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('This field is required'),
@@ -36,7 +37,8 @@ interface IValues {
 }
 
 const ProductForm = ({navigation, route}: any) => {
-  const {title, product} = route.params;
+  const title = route?.params?.title;
+  const product = route?.params?.product;
   const [imageError, setImageError] = useState('');
   const [images, setImages] = useState(['', '', '']);
   const [isLoading, setIsLoading] = useState(false);
@@ -58,7 +60,7 @@ const ProductForm = ({navigation, route}: any) => {
   }, [title]);
 
   const handlePressImage = (index: number) => {
-    ImagePicker.openPicker({
+    /*ImagePicker.openPicker({
       width: 700,
       height: 700,
       cropping: true,
@@ -67,12 +69,12 @@ const ProductForm = ({navigation, route}: any) => {
       const holder = [...images];
       holder[index] = image.path;
       setImages(holder);
-    });
+    });*/
   };
 
   const submit = async (values: IValues) => {
     const imagesToUpload = images.filter(
-      image => image.substring(0, 8) === 'file:///',
+      image => !isValidURL(image) && !isEmpty(image),
     );
 
     if (imageError === '') {
@@ -101,7 +103,7 @@ const ProductForm = ({navigation, route}: any) => {
             imagesUrl?.length === product.images.length
           ) {
             const retainImages = images.filter(
-              image => image.substring(0, 8) !== 'file:///' && image !== '',
+              image => isValidURL(image) && !isEmpty(image),
             );
             newImages = [...imagesUrl, ...retainImages];
           }

@@ -33,7 +33,7 @@ interface IItem {
 
 const ProductDetails = ({navigation, route}: any) => {
   const {cart, setCart} = useContext(GlobalContext);
-  const {product} = route.params;
+  const product = route?.params?.product;
   const isCarousel = useRef(null);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -92,7 +92,7 @@ const ProductDetails = ({navigation, route}: any) => {
       <Box my="2" alignItems="center">
         <Carousel
           ref={isCarousel}
-          data={product?.images}
+          data={product?.images || []}
           renderItem={renderItem}
           sliderWidth={SLIDER_WIDTH}
           itemWidth={ITEM_WIDTH}
@@ -102,12 +102,12 @@ const ProductDetails = ({navigation, route}: any) => {
         <Stack p="3" space={3}>
           <Stack space={2}>
             <Heading size="md" ml="-1">
-              {product.name}
+              {product?.name}
             </Heading>
           </Stack>
-          <Text fontWeight="400">{product.description}</Text>
+          <Text fontWeight="400">{product?.description}</Text>
           <Text color="coolGray.600" fontWeight="bold">
-            {`PHP ${product.price}`}
+            {`PHP ${product?.price}`}
           </Text>
         </Stack>
       </Box>
@@ -141,14 +141,14 @@ const ProductDetails = ({navigation, route}: any) => {
               <Stack p="3" space={3}>
                 <Stack space={2}>
                   <Heading size="md" ml="-1">
-                    {product.name}
+                    {product?.name}
                   </Heading>
                 </Stack>
                 <Text numberOfLines={3} fontWeight="400">
-                  {product.description}
+                  {product?.description}
                 </Text>
                 <Text color="coolGray.600" fontWeight="bold">
-                  {`PHP ${product.price}`}
+                  {`PHP ${product?.price}`}
                 </Text>
               </Stack>
             </Box>
